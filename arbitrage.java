@@ -28,7 +28,7 @@ return temp;
      public static void main(String[] args) {
     
 
-//index 1 from every arraylist will be the data from the same sportsbooking app
+//index 1 of all arrays gives the odds from booky1, index 2 from every array gives odds from booky 2 etc...
 
     ArrayList<Double> oddsofteam1= new ArrayList<>();
     ArrayList<Double> oddsofteam2= new ArrayList<>();
@@ -74,11 +74,12 @@ for(int i=0;i<probofteam1.size();i++){
         for(int k=0;k<probofdraw.size();k++){
 
             if(probofteam1.get(i)+probofteam2.get(j)+probofdraw.get(k)<100.0){
+                double profit_opportunity=100-(probofteam1.get(i)+probofteam2.get(j)+probofdraw.get(k));
 booky1=i;
 booky2=j;
 booky3=k;
 
-System.out.println("arbitrage opportunity found");
+System.out.println("arbitrage opportunity for " + profit_opportunity +"% found using:");
 System.out.println("booky for team1= " + booky1);
 System.out.println("booky for team2= " + booky2);
 System.out.println("booky for draw= " + booky3);
